@@ -8,9 +8,8 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "homepage": "https://soyjce.github.io/josecarlos-dev",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "homepage": "https://soyjce.github.io/josecarlos-dev"
+    
 
   },
   "dependencies": {
