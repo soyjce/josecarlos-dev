@@ -7,8 +7,7 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "homepage": "https://soyjce.github.io/josecarlos-dev"
+    "astro": "astro"
     
 
   },
