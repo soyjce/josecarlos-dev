@@ -1,6 +1,6 @@
 <h2 align="center">
   <p>Personal website built with Astro</p>
-  <a href="https://vrus.vercel.app/" target="_blank">https://vrus.vercel.app/</a>
+  <a href="" target="_blank"></a>
 </h2>
 
 <div align="center">
