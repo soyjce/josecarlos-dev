@@ -1,10 +1,14 @@
 name: Deploy to GitHub Pages
 
 on:
+  # Activa el flujo de trabajo cada vez que hagas push a la rama `main`
+  # Usando un nombre de rama diferente? Reemplaza `main` con el nombre de tu rama
   push:
     branches: [ main ]
+  # Te permite ejecutar este flujo de trabajo manualmente desde la pestaña Acciones en GitHub.
   workflow_dispatch:
 
+# Permite que este trabajo clone el repositorio y cree un despliegue de página
 permissions:
   contents: read
   pages: write
@@ -17,18 +21,26 @@ jobs:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
 
-      # Configura pnpm y define la versión que deseas usar
-      - name: Set up pnpm
-        uses: pnpm/action-setup@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          version: latest  # Cambia la versión si necesitas otra
+          node-version: 20
+          cache: 'pnpm'
 
-      - name: Install, build, and upload your site
-        uses: withastro/action@v2
-        with:
-          # Define el gestor de paquetes que debería usarse
-          package-manager: pnpm@8.0.0  # Cambia la versión si necesitas otra
-          node-version: 20  # Puedes cambiar la versión de Node si es necesario
+      # Eliminar el archivo pnpm-lock.yaml para evitar incompatibilidades
+      - name: Remove pnpm lockfile
+        run: rm -f pnpm-lock.yaml
+
+      # Instalar pnpm manualmente
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      # Forzar la instalación de dependencias para evitar problemas de caché
+      - name: Install dependencies
+        run: pnpm install --force
+
+      - name: Build the site
+        run: pnpm run build
 
   deploy:
     needs: build
