@@ -23,9 +23,13 @@ jobs:
           node-version: 20
           cache: 'pnpm'
 
-      # Instalar pnpm correctamente
+      # Instalar pnpm
       - name: Install pnpm
         run: npm install -g pnpm
+
+      # Verificar la instalación de pnpm
+      - name: Verify pnpm installation
+        run: pnpm --version
 
       # Forzar la instalación de dependencias
       - name: Install dependencies
