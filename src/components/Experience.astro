@@ -1,0 +1,96 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+
+
+const EXPERIENCIE = [
+  {
+    date: "Octubre 2023 - Presente",
+    title: "Administrador de servidores",
+    company: "Reckon Solution",
+    description:
+      "Administre los servidores | Brinde soporte para el portal web, identificando y resolviendo problemas de rendimiento | Proveí soporte para solucionar problemas con los servidores que afectaban el funcionamiento del portal | Soporte a usuarios vía remota.",
+    link: "https://reckonsolution.com/",
+    technologies: [
+      "VMware",
+      "ESXi",
+      "VCenter",
+      "Team Viewer",      
+    ],
+  },
+  {
+    date: "Agosto 2022 — Octubre 2023",
+    title: "Desarrollador Backend",
+    company: "TSOFT",
+    description:
+      "Participé en el ciclo de desarrollo de software, desde la fase de diseño hasta la implementación, con un enfoque en la optimización de aplicaciones preexistentes, para mejorar su rendimiento y escalabilidad. | Contribuí significativamente en el desarrollo, migración e implementación de soluciones empresariales, destacando proyectos de alta relevancia para instituciones financieras como la Bolsa Mexicana de Valores. | Migración de mecanismo de login de sistema desarrollado con JSF y EJB's hacia Single Sign On y JWT customizado con cliente Springboot.",
+      link: "https://www.tsoftglobal.com/",
+      technologies: [
+      "Java",
+      "Speing Boot",
+      "Angular",
+      "Hibernate",
+      "Maven",
+      "SQL",
+      "Jboss",
+      "GitHub",
+      "GitLab",      
+    ],
+    
+    },
+  {
+    date: "Agosto 2020 — Agosto 2022",
+    title: "Analista de Sistemas",
+    company: "Grupo Hergosa",
+    description:
+      "Administración y virtualización de servidores con VMware, ESXi y VCenter. | Active directory. | Administración de Fortinet. | Administrador de Zendesk (Sistema de tickets). | Soporte a usuarios presencial y vía remota (Team Viewer y Escritorio Remoto). | Virtualización y clonación de equipos. |  Mantenimiento preventivo y correctivo a equipos de cómputo. | Impresoras, telefonía IP, cableado estructurado.",
+    link: "https://www.grupohergosa.com.mx/",
+    technologies: [
+      "VMware",
+      "ESXi",
+      "VCenter",
+      "Zendesk",
+      "Team Viewer",      
+    ],
+  },
+  {
+    date: "Noviembre 2016 — Julio 2020",
+    title: "Ingeniero de Soporte Técnico",
+    company: "PRODECON",
+    description:
+      "Coordinador de zona. | Encargado del departamento de sistemas. | Implementé un software en el área de quejas que permitió una mejora del 300% en eficiencia. |  Mantenimiento preventivo y correctivo a equipo de cómputo. | Soporte técnico a usuarios, presencial y vía remota. | Impresoras, telefonía IP.",
+    link: "https://www.prodecon.gob.mx/",
+    technologies: [
+      "Java",
+      "SQL",      
+    ],
+  },
+  {
+    date: "Diciembre 2015 — Junio 2016",
+    title: "Ingeniero de Soporte Técnico",
+    company: "AUMA S.A. De C.V,",
+    description:
+      "Implemente un software para el área de metrología para sustituir el anterior. | Soporte técnico a usuarios, presencial y vía remota. | Reparación y preparación de equipo de cómputo, diagnóstico de fallas. | Recuperación y respaldo de información. | Mantenimiento preventivo y correctivo. | Impresoras y telefonía IP.",
+    link: "https://www.auma.com/es_ES",
+    technologies: [
+      "Java",
+      "C#",
+      "SQL",      
+    ],
+  },
+  
+]
+---
+<div class="flex flex-col gap-y-16">
+  
+</div>
+
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>

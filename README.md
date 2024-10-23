@@ -1,11 +1,12 @@
+# josecarlos-dev
+
 <h2 align="center">
   <p>Personal website built with Astro</p>
   <a href="" target="_blank"></a>
 </h2>
 
 <div align="center">
-  <img alt="Demo" src="./demo/demo.webp" />
-  <img alt="Demo" src="./demo/pagespeed-score.png" />
+  <img alt="Demo" src="./public/demo.webp" />
 </div>
 
 <p align="center">
